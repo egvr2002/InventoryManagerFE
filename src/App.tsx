@@ -1,10 +1,15 @@
-import { Button } from './components/ui/button';
+import {SearchProducts} from "./components/products/search-products";
+import {ProductsTable} from "./components/products/products-table";
+import {ProductMetrics} from "./components/products/product-metrics";
+import {Header} from "./components/shared/header";
 
 export default function App() {
   return (
-    <div className="flex min-h-dvh flex-col items-center justify-center gap-2 bg-gradient-to-b from-white via-gray-200 to-gray-300">
-      <h1 className="text-2xl font-thin">Hello world!</h1>
-      <Button>Click me</Button>
+    <div className="mx-auto min-h-dvh max-w-full justify-center space-y-6 p-4 lg:max-w-4/6">
+      <Header />
+      <SearchProducts />
+      <ProductsTable />
+      <ProductMetrics />
     </div>
   );
 }
