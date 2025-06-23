@@ -1,6 +1,6 @@
 import type {Page} from "./page.interface";
 
-export interface PaginatedResponse<T> {
+export interface Paginated<T> {
   content: T[];
   page: Page;
 }

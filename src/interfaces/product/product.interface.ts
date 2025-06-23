@@ -1,3 +1,5 @@
+import type {Paginated} from "../shared/paginated.interface";
+
 export interface Product {
   id: string;
   name: string;
@@ -8,3 +10,7 @@ export interface Product {
   createdAt: Date;
   updatedAt: Date;
 }
+
+export type PaginatedProducts = Paginated<Product>;
+
+export type ProductDTO = Omit<Product, "id" | "createdAt" | "updatedAt">;
