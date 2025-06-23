@@ -3,9 +3,9 @@ export interface ApiResponse<T> {
   statusCode: number;
   message: string;
   data: T | null;
-  error:
-    | ({
-        [k in keyof T]?: string;
-      } & {details?: string})
-    | null;
+  error: Error<T> | null;
 }
+
+type Error<T> = {
+  [k in keyof T]?: string;
+} & {details?: string};
