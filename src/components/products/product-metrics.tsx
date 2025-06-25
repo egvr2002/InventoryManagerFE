@@ -1,3 +1,5 @@
+import type {InventoryMetrics} from "@/interfaces/product/inventoryMetrics.interface";
+import {formatCurrency} from "@/lib/utils";
 import {Card, CardContent} from "../ui/card";
 import {
   Table,
@@ -8,7 +10,11 @@ import {
   TableRow,
 } from "../ui/table";
 
-export function ProductMetrics() {
+interface InventoryMetricsProps {
+  inventoryMetrics: InventoryMetrics[];
+}
+
+export function InventoryMetrics({inventoryMetrics}: InventoryMetricsProps) {
   return (
     <Card>
       <CardContent>
@@ -16,37 +22,35 @@ export function ProductMetrics() {
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead></TableHead>
-                <TableHead>Total products in Stock</TableHead>
-                <TableHead>Total Value in Stock</TableHead>
-                <TableHead>Average price in Stock</TableHead>
+                <TableHead className="font-semibold">Category</TableHead>
+                <TableHead className="text-center font-semibold">
+                  Total Products
+                </TableHead>
+                <TableHead className="text-right font-semibold">
+                  Total Value
+                </TableHead>
+                <TableHead className="text-right font-semibold">
+                  Average Price
+                </TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
-              <TableRow>
-                <TableCell>Food</TableCell>
-                <TableCell>50</TableCell>
-                <TableCell>$75</TableCell>
-                <TableCell>$1.50</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Clothing</TableCell>
-                <TableCell>100</TableCell>
-                <TableCell>$4,500</TableCell>
-                <TableCell>$45.00</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Electornics</TableCell>
-                <TableCell>0</TableCell>
-                <TableCell>$0</TableCell>
-                <TableCell>$0</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell>Overall</TableCell>
-                <TableCell>150</TableCell>
-                <TableCell>$4,575.00</TableCell>
-                <TableCell>$30.50</TableCell>
-              </TableRow>
+              {inventoryMetrics.map((metric) => (
+                <TableRow key={metric.category}>
+                  <TableCell className="font-medium">
+                    {metric.category}
+                  </TableCell>
+                  <TableCell className="text-center tabular-nums">
+                    {metric.totalProductsInStock}
+                  </TableCell>
+                  <TableCell className="text-right text-sm tabular-nums">
+                    {formatCurrency(metric.totalValueInStock)}
+                  </TableCell>
+                  <TableCell className="text-right text-sm tabular-nums">
+                    {formatCurrency(metric.averagePriceInStock)}
+                  </TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </div>
