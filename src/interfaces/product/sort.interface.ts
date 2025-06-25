@@ -1,4 +1,6 @@
 export interface Sort {
   field: string;
-  order: "asc" | "desc";
+  order: Order;
 }
+
+export type Order = "asc" | "desc";

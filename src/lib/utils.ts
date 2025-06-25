@@ -37,3 +37,63 @@ export function generateSortParams(sort: Sort[]): string {
     "",
   );
 }
+
+export function formatCurrency(
+  amount: number,
+  currency = "USD",
+  locale = "en-US",
+): string {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency,
+  }).format(amount);
+}
+
+export function formatDate(date: Date | string, locale = "en-US"): string {
+  let dateObj: Date;
+
+  if (typeof date === "string") {
+    if (date.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      const [year, month, day] = date.split("-").map(Number);
+      dateObj = new Date(year, month - 1, day);
+    } else {
+      dateObj = new Date(date);
+    }
+  } else {
+    dateObj = date;
+  }
+
+  if (isNaN(dateObj.getTime())) {
+    return "Invalid Date";
+  }
+
+  return new Intl.DateTimeFormat(locale, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(dateObj);
+}
+
+export function getDaysUntilExpiration(
+  expirationDate: Date | string,
+): number | null {
+  if (!expirationDate) return null;
+
+  const today = new Date();
+  let expDate: Date;
+
+  if (typeof expirationDate === "string") {
+    // Handle date strings that might be in YYYY-MM-DD format
+    if (expirationDate.match(/^\d{4}-\d{2}-\d{2}$/)) {
+      const [year, month, day] = expirationDate.split("-").map(Number);
+      expDate = new Date(year, month - 1, day); // month is 0-indexed
+    } else {
+      expDate = new Date(expirationDate);
+    }
+  } else {
+    expDate = expirationDate;
+  }
+
+  const diffTime = expDate.getTime() - today.getTime();
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+}
