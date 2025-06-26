@@ -38,6 +38,7 @@ export function addProductThunk(product: ProductDTO) {
   return async function (dispatch: AppDispatch) {
     await inventoryApi.post<ApiResponse<Product>>("/products", product);
     dispatch(loadProductsThunk());
+    dispatch(loadCategoriesThunk());
     dispatch(loadInventoryMetricsThunk());
   };
 }
@@ -59,6 +60,7 @@ export function markProductAsOutOfStockThunk(productId: string) {
       `/products/${productId}/outofstock`,
     );
     dispatch(loadProductsThunk());
+    dispatch(loadCategoriesThunk());
     dispatch(loadInventoryMetricsThunk());
   };
 }
@@ -69,6 +71,7 @@ export function markProductAsInStockThunk(productId: string) {
       `/products/${productId}/instock`,
     );
     dispatch(loadProductsThunk());
+    dispatch(loadCategoriesThunk());
     dispatch(loadInventoryMetricsThunk());
   };
 }
@@ -77,6 +80,7 @@ export function deleteProductThunk(productId: string) {
   return async function (dispatch: AppDispatch) {
     await inventoryApi.delete<ApiResponse<void>>(`/products/${productId}`);
     dispatch(loadProductsThunk());
+    dispatch(loadCategoriesThunk());
     dispatch(loadInventoryMetricsThunk());
   };
 }

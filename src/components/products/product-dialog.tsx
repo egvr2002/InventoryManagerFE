@@ -58,6 +58,7 @@ export function ProductDialog({action, product}: ProductDialogProps) {
     <Dialog
       open={open}
       onOpenChange={setOpen}
+      data-testid="product-dialog"
     >
       <DialogTrigger asChild>
         <Button
