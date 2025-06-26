@@ -2,8 +2,8 @@ import {describe, it, expect} from "vitest";
 import {
   productSlice,
   setProducts,
-} from "../../store/slices/inventory/productSlice";
-import type {Product} from "../../interfaces/product/product.interface";
+} from "../../../store/slices/inventory/productSlice";
+import type {Product} from "../../../interfaces/product/product.interface";
 
 const mockProducts: Product[] = [
   {

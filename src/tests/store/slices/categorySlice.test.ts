@@ -2,8 +2,8 @@ import {describe, it, expect} from "vitest";
 import {
   categorySlice,
   loadCategories,
-} from "../../store/slices/inventory/categorySlice";
-import type {Category} from "../../interfaces/product/category.interface";
+} from "../../../store/slices/inventory/categorySlice";
+import type {Category} from "../../../interfaces/product/category.interface";
 
 const mockCategories: Category[] = ["Electronics", "Books", "Clothing", "Food"];
 

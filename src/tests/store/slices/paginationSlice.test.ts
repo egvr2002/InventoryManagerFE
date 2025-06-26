@@ -3,8 +3,8 @@ import {
   paginationSlice,
   setPaginationData,
   setCurrentPage,
-} from "../../store/slices/inventory/paginationSlice";
-import type {Page} from "../../interfaces/shared/page.interface";
+} from "../../../store/slices/inventory/paginationSlice";
+import type {Page} from "../../../interfaces/shared/page.interface";
 
 const mockPaginationData: Page = {
   size: 10,

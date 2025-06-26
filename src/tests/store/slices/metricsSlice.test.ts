@@ -2,8 +2,8 @@ import {describe, it, expect} from "vitest";
 import {
   metricsSlice,
   loadInventoryMetrics,
-} from "../../store/slices/inventory/metricsSlice";
-import type {InventoryMetrics} from "../../interfaces/product/inventoryMetrics.interface";
+} from "../../../store/slices/inventory/metricsSlice";
+import type {InventoryMetrics} from "../../../interfaces/product/inventoryMetrics.interface";
 
 const mockInventoryMetrics: InventoryMetrics[] = [
   {
