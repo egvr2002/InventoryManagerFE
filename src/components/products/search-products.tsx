@@ -57,6 +57,7 @@ export function SearchProducts() {
     <Card>
       <CardContent>
         <form
+          data-testid="search-products-form"
           onSubmit={handleSearchProducts}
           className="space-y-6"
         >

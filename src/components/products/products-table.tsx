@@ -55,7 +55,7 @@ export function ProductsTable({products}: ProductsTableProps) {
   };
 
   return (
-    <Card>
+    <Card data-testid="products-table">
       <CardHeader>
         <ProductDialog action="add" />
       </CardHeader>

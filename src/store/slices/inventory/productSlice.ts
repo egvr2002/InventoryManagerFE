@@ -25,4 +25,4 @@ export const productSlice = createSlice({
   },
 });
 
-export const {setProducts} = productSlice.actions;
+export const {setProducts, setIsLoadingProducts} = productSlice.actions;

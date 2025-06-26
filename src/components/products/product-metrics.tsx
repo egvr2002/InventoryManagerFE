@@ -16,7 +16,7 @@ interface InventoryMetricsProps {
 
 export function InventoryMetrics({inventoryMetrics}: InventoryMetricsProps) {
   return (
-    <Card>
+    <Card data-testid="inventory-metrics">
       <CardContent>
         <div className="rounded-md border">
           <Table>

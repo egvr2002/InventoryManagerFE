@@ -1,0 +1,1225 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should match with the snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="mx-auto min-h-dvh max-w-full justify-center space-y-6 p-4 lg:max-w-4/6"
+      >
+        <header>
+          <h1
+            class="text-center text-xl font-medium"
+          >
+            Inventory 
+            <span
+              class="text-green-700"
+            >
+              Manager
+            </span>
+          </h1>
+        </header>
+        <div
+          class="bg-card text-card-foreground border-primary flex flex-col gap-6 rounded-xl border border-dashed py-6 shadow-sm"
+          data-slot="card"
+        >
+          <div
+            class="px-6"
+            data-slot="card-content"
+          >
+            <form
+              class="space-y-6"
+              data-testid="search-products-form"
+            >
+              <div
+                class="grid grid-cols-12 justify-between gap-2"
+              >
+                <label
+                  class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 col-span-full md:col-span-2"
+                  data-slot="label"
+                  for="name"
+                >
+                  Name
+                </label>
+                <input
+                  class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive col-span-full md:col-span-10"
+                  data-slot="input"
+                  id="name"
+                  name="name"
+                  placeholder="Enter product name"
+                  type="text"
+                />
+              </div>
+              <div
+                class="grid grid-cols-12 gap-2"
+              >
+                <label
+                  class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 col-span-full md:col-span-2"
+                  data-slot="label"
+                  for="category"
+                >
+                  Category
+                </label>
+                <button
+                  aria-autocomplete="none"
+                  aria-controls="radix-«r0»"
+                  aria-expanded="false"
+                  class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 col-span-full w-full md:col-span-10"
+                  data-placeholder=""
+                  data-size="default"
+                  data-slot="select-trigger"
+                  data-state="closed"
+                  dir="ltr"
+                  id="category"
+                  role="combobox"
+                  type="button"
+                >
+                  <span
+                    data-slot="select-value"
+                    style="pointer-events: none;"
+                  >
+                    Select category
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-chevron-down size-4 opacity-50"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+                </button>
+                <select
+                  aria-hidden="true"
+                  name="category"
+                  style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+                  tabindex="-1"
+                >
+                  <option
+                    value=""
+                  />
+                  <option
+                    value="all"
+                  >
+                    All Categories
+                  </option>
+                </select>
+              </div>
+              <div
+                class="grid grid-cols-12 gap-2"
+              >
+                <label
+                  class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 col-span-full md:col-span-2"
+                  data-slot="label"
+                  for="availability"
+                >
+                  Availability
+                </label>
+                <button
+                  aria-autocomplete="none"
+                  aria-controls="radix-«r1»"
+                  aria-expanded="false"
+                  class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 col-span-full w-full md:col-span-6"
+                  data-placeholder=""
+                  data-size="default"
+                  data-slot="select-trigger"
+                  data-state="closed"
+                  dir="ltr"
+                  id="availability"
+                  role="combobox"
+                  type="button"
+                >
+                  <span
+                    data-slot="select-value"
+                    style="pointer-events: none;"
+                  >
+                    Select availability
+                  </span>
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-chevron-down size-4 opacity-50"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m6 9 6 6 6-6"
+                    />
+                  </svg>
+                </button>
+                <select
+                  aria-hidden="true"
+                  name="availability"
+                  style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+                  tabindex="-1"
+                >
+                  <option
+                    value=""
+                  />
+                  <option
+                    value="all"
+                  >
+                    All
+                  </option>
+                  <option
+                    value="in_stock"
+                  >
+                    In Stock
+                  </option>
+                  <option
+                    value="out_of_stock"
+                  >
+                    Out of Stock
+                  </option>
+                </select>
+                <div
+                  class="col-span-full flex gap-2 md:col-span-4"
+                >
+                  <button
+                    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 flex-1 md:w-full"
+                    data-slot="button"
+                    type="submit"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="lucide lucide-search mr-2 size-4"
+                      fill="none"
+                      height="24"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m21 21-4.34-4.34"
+                      />
+                      <circle
+                        cx="11"
+                        cy="11"
+                        r="8"
+                      />
+                    </svg>
+                     Search
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div
+          class="bg-card text-card-foreground border-primary flex flex-col gap-6 rounded-xl border border-dashed py-6 shadow-sm"
+          data-slot="card"
+          data-testid="products-table"
+        >
+          <div
+            class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6"
+            data-slot="card-header"
+          >
+            <button
+              aria-controls="radix-«r2»"
+              aria-expanded="false"
+              aria-haspopup="dialog"
+              class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 has-[>svg]:px-3 m-0 w-fit p-0"
+              data-slot="dialog-trigger"
+              data-state="closed"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="lucide lucide-plus"
+                fill="none"
+                height="24"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12h14"
+                />
+                <path
+                  d="M12 5v14"
+                />
+              </svg>
+               New product
+            </button>
+          </div>
+          <div
+            class="px-6"
+            data-slot="card-content"
+          >
+            <div
+              class="rounded-md border"
+            >
+              <div
+                class="relative w-full overflow-x-auto"
+                data-slot="table-container"
+              >
+                <table
+                  class="w-full caption-bottom text-sm"
+                  data-slot="table"
+                >
+                  <thead
+                    class="[&_tr]:border-b"
+                    data-slot="table-header"
+                  >
+                    <tr
+                      class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+                      data-slot="table-row"
+                    >
+                      <th
+                        class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+                        data-slot="table-head"
+                      >
+                        <button
+                          aria-checked="false"
+                          class="peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+                          data-disabled=""
+                          data-slot="checkbox"
+                          data-state="unchecked"
+                          disabled=""
+                          role="checkbox"
+                          type="button"
+                          value="on"
+                        />
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+                        data-slot="table-head"
+                      >
+                        <button
+                          class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto justify-start p-0 font-semibold hover:bg-transparent"
+                          data-slot="button"
+                        >
+                          <span
+                            class="flex items-center"
+                          >
+                            Category
+                            <svg
+                              aria-hidden="true"
+                              class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="m7 15 5 5 5-5"
+                              />
+                              <path
+                                d="m7 9 5-5 5 5"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+                        data-slot="table-head"
+                      >
+                        <button
+                          class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto justify-start p-0 font-semibold hover:bg-transparent"
+                          data-slot="button"
+                        >
+                          <span
+                            class="flex items-center"
+                          >
+                            Name
+                            <svg
+                              aria-hidden="true"
+                              class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="m7 15 5 5 5-5"
+                              />
+                              <path
+                                d="m7 9 5-5 5 5"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+                        data-slot="table-head"
+                      >
+                        <button
+                          class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto p-0 font-semibold hover:bg-transparent justify-end"
+                          data-slot="button"
+                        >
+                          <span
+                            class="flex items-center"
+                          >
+                            Price
+                            <svg
+                              aria-hidden="true"
+                              class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="m7 15 5 5 5-5"
+                              />
+                              <path
+                                d="m7 9 5-5 5 5"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-center"
+                        data-slot="table-head"
+                      >
+                        <button
+                          class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto p-0 font-semibold hover:bg-transparent justify-center"
+                          data-slot="button"
+                        >
+                          <span
+                            class="flex items-center"
+                          >
+                            Expiration Date
+                            <svg
+                              aria-hidden="true"
+                              class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="m7 15 5 5 5-5"
+                              />
+                              <path
+                                d="m7 9 5-5 5 5"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-center"
+                        data-slot="table-head"
+                      >
+                        <button
+                          class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto p-0 font-semibold hover:bg-transparent justify-center"
+                          data-slot="button"
+                        >
+                          <span
+                            class="flex items-center"
+                          >
+                            Stock
+                            <svg
+                              aria-hidden="true"
+                              class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                              fill="none"
+                              height="24"
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              viewBox="0 0 24 24"
+                              width="24"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="m7 15 5 5 5-5"
+                              />
+                              <path
+                                d="m7 9 5-5 5 5"
+                              />
+                            </svg>
+                          </span>
+                        </button>
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 text-left align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-semibold"
+                        data-slot="table-head"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="[&_tr:last-child]:border-0"
+                    data-slot="table-body"
+                  >
+                    <tr
+                      class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+                      data-slot="table-row"
+                    >
+                      <td
+                        class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] h-24 text-center"
+                        colspan="7"
+                        data-slot="table-cell"
+                      >
+                        <div
+                          class="text-muted-foreground flex flex-col items-center justify-center space-y-1 py-2"
+                        >
+                          <div
+                            class="text-sm"
+                          >
+                            Loading products...
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-card text-card-foreground border-primary flex flex-col gap-6 rounded-xl border border-dashed py-6 shadow-sm"
+          data-slot="card"
+          data-testid="inventory-metrics"
+        >
+          <div
+            class="px-6"
+            data-slot="card-content"
+          >
+            <div
+              class="rounded-md border"
+            >
+              <div
+                class="relative w-full overflow-x-auto"
+                data-slot="table-container"
+              >
+                <table
+                  class="w-full caption-bottom text-sm"
+                  data-slot="table"
+                >
+                  <thead
+                    class="[&_tr]:border-b"
+                    data-slot="table-header"
+                  >
+                    <tr
+                      class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+                      data-slot="table-row"
+                    >
+                      <th
+                        class="text-foreground h-10 px-2 text-left align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-semibold"
+                        data-slot="table-head"
+                      >
+                        Category
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-center font-semibold"
+                        data-slot="table-head"
+                      >
+                        Total Products
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right font-semibold"
+                        data-slot="table-head"
+                      >
+                        Total Value
+                      </th>
+                      <th
+                        class="text-foreground h-10 px-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right font-semibold"
+                        data-slot="table-head"
+                      >
+                        Average Price
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="[&_tr:last-child]:border-0"
+                    data-slot="table-body"
+                  />
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="mx-auto min-h-dvh max-w-full justify-center space-y-6 p-4 lg:max-w-4/6"
+    >
+      <header>
+        <h1
+          class="text-center text-xl font-medium"
+        >
+          Inventory 
+          <span
+            class="text-green-700"
+          >
+            Manager
+          </span>
+        </h1>
+      </header>
+      <div
+        class="bg-card text-card-foreground border-primary flex flex-col gap-6 rounded-xl border border-dashed py-6 shadow-sm"
+        data-slot="card"
+      >
+        <div
+          class="px-6"
+          data-slot="card-content"
+        >
+          <form
+            class="space-y-6"
+            data-testid="search-products-form"
+          >
+            <div
+              class="grid grid-cols-12 justify-between gap-2"
+            >
+              <label
+                class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 col-span-full md:col-span-2"
+                data-slot="label"
+                for="name"
+              >
+                Name
+              </label>
+              <input
+                class="file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive col-span-full md:col-span-10"
+                data-slot="input"
+                id="name"
+                name="name"
+                placeholder="Enter product name"
+                type="text"
+              />
+            </div>
+            <div
+              class="grid grid-cols-12 gap-2"
+            >
+              <label
+                class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 col-span-full md:col-span-2"
+                data-slot="label"
+                for="category"
+              >
+                Category
+              </label>
+              <button
+                aria-autocomplete="none"
+                aria-controls="radix-«r0»"
+                aria-expanded="false"
+                class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 col-span-full w-full md:col-span-10"
+                data-placeholder=""
+                data-size="default"
+                data-slot="select-trigger"
+                data-state="closed"
+                dir="ltr"
+                id="category"
+                role="combobox"
+                type="button"
+              >
+                <span
+                  data-slot="select-value"
+                  style="pointer-events: none;"
+                >
+                  Select category
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-down size-4 opacity-50"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                  />
+                </svg>
+              </button>
+              <select
+                aria-hidden="true"
+                name="category"
+                style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+                tabindex="-1"
+              >
+                <option
+                  value=""
+                />
+                <option
+                  value="all"
+                >
+                  All Categories
+                </option>
+              </select>
+            </div>
+            <div
+              class="grid grid-cols-12 gap-2"
+            >
+              <label
+                class="flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 col-span-full md:col-span-2"
+                data-slot="label"
+                for="availability"
+              >
+                Availability
+              </label>
+              <button
+                aria-autocomplete="none"
+                aria-controls="radix-«r1»"
+                aria-expanded="false"
+                class="border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 dark:hover:bg-input/50 flex items-center justify-between gap-2 rounded-md border bg-transparent px-3 py-2 text-sm whitespace-nowrap shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-9 data-[size=sm]:h-8 *:data-[slot=select-value]:line-clamp-1 *:data-[slot=select-value]:flex *:data-[slot=select-value]:items-center *:data-[slot=select-value]:gap-2 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4 col-span-full w-full md:col-span-6"
+                data-placeholder=""
+                data-size="default"
+                data-slot="select-trigger"
+                data-state="closed"
+                dir="ltr"
+                id="availability"
+                role="combobox"
+                type="button"
+              >
+                <span
+                  data-slot="select-value"
+                  style="pointer-events: none;"
+                >
+                  Select availability
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="lucide lucide-chevron-down size-4 opacity-50"
+                  fill="none"
+                  height="24"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m6 9 6 6 6-6"
+                  />
+                </svg>
+              </button>
+              <select
+                aria-hidden="true"
+                name="availability"
+                style="position: absolute; border: 0px; width: 1px; height: 1px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; word-wrap: normal;"
+                tabindex="-1"
+              >
+                <option
+                  value=""
+                />
+                <option
+                  value="all"
+                >
+                  All
+                </option>
+                <option
+                  value="in_stock"
+                >
+                  In Stock
+                </option>
+                <option
+                  value="out_of_stock"
+                >
+                  Out of Stock
+                </option>
+              </select>
+              <div
+                class="col-span-full flex gap-2 md:col-span-4"
+              >
+                <button
+                  class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[>svg]:px-3 flex-1 md:w-full"
+                  data-slot="button"
+                  type="submit"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="lucide lucide-search mr-2 size-4"
+                    fill="none"
+                    height="24"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m21 21-4.34-4.34"
+                    />
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="8"
+                    />
+                  </svg>
+                   Search
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="bg-card text-card-foreground border-primary flex flex-col gap-6 rounded-xl border border-dashed py-6 shadow-sm"
+        data-slot="card"
+        data-testid="products-table"
+      >
+        <div
+          class="@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start gap-1.5 px-6 has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6"
+          data-slot="card-header"
+        >
+          <button
+            aria-controls="radix-«r2»"
+            aria-expanded="false"
+            aria-haspopup="dialog"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 h-9 has-[>svg]:px-3 m-0 w-fit p-0"
+            data-slot="dialog-trigger"
+            data-state="closed"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="lucide lucide-plus"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 12h14"
+              />
+              <path
+                d="M12 5v14"
+              />
+            </svg>
+             New product
+          </button>
+        </div>
+        <div
+          class="px-6"
+          data-slot="card-content"
+        >
+          <div
+            class="rounded-md border"
+          >
+            <div
+              class="relative w-full overflow-x-auto"
+              data-slot="table-container"
+            >
+              <table
+                class="w-full caption-bottom text-sm"
+                data-slot="table"
+              >
+                <thead
+                  class="[&_tr]:border-b"
+                  data-slot="table-header"
+                >
+                  <tr
+                    class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+                    data-slot="table-row"
+                  >
+                    <th
+                      class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+                      data-slot="table-head"
+                    >
+                      <button
+                        aria-checked="false"
+                        class="peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50"
+                        data-disabled=""
+                        data-slot="checkbox"
+                        data-state="unchecked"
+                        disabled=""
+                        role="checkbox"
+                        type="button"
+                        value="on"
+                      />
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+                      data-slot="table-head"
+                    >
+                      <button
+                        class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto justify-start p-0 font-semibold hover:bg-transparent"
+                        data-slot="button"
+                      >
+                        <span
+                          class="flex items-center"
+                        >
+                          Category
+                          <svg
+                            aria-hidden="true"
+                            class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="m7 15 5 5 5-5"
+                            />
+                            <path
+                              d="m7 9 5-5 5 5"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]"
+                      data-slot="table-head"
+                    >
+                      <button
+                        class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto justify-start p-0 font-semibold hover:bg-transparent"
+                        data-slot="button"
+                      >
+                        <span
+                          class="flex items-center"
+                        >
+                          Name
+                          <svg
+                            aria-hidden="true"
+                            class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="m7 15 5 5 5-5"
+                            />
+                            <path
+                              d="m7 9 5-5 5 5"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right"
+                      data-slot="table-head"
+                    >
+                      <button
+                        class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto p-0 font-semibold hover:bg-transparent justify-end"
+                        data-slot="button"
+                      >
+                        <span
+                          class="flex items-center"
+                        >
+                          Price
+                          <svg
+                            aria-hidden="true"
+                            class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="m7 15 5 5 5-5"
+                            />
+                            <path
+                              d="m7 9 5-5 5 5"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-center"
+                      data-slot="table-head"
+                    >
+                      <button
+                        class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto p-0 font-semibold hover:bg-transparent justify-center"
+                        data-slot="button"
+                      >
+                        <span
+                          class="flex items-center"
+                        >
+                          Expiration Date
+                          <svg
+                            aria-hidden="true"
+                            class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="m7 15 5 5 5-5"
+                            />
+                            <path
+                              d="m7 9 5-5 5 5"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-center"
+                      data-slot="table-head"
+                    >
+                      <button
+                        class="items-center gap-2 whitespace-nowrap rounded-md text-sm transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:text-accent-foreground dark:hover:bg-accent/50 has-[>svg]:px-3 flex h-auto p-0 font-semibold hover:bg-transparent justify-center"
+                        data-slot="button"
+                      >
+                        <span
+                          class="flex items-center"
+                        >
+                          Stock
+                          <svg
+                            aria-hidden="true"
+                            class="lucide lucide-chevrons-up-down ml-2 h-4 w-4"
+                            fill="none"
+                            height="24"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            width="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="m7 15 5 5 5-5"
+                            />
+                            <path
+                              d="m7 9 5-5 5 5"
+                            />
+                          </svg>
+                        </span>
+                      </button>
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 text-left align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-semibold"
+                      data-slot="table-head"
+                    >
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="[&_tr:last-child]:border-0"
+                  data-slot="table-body"
+                >
+                  <tr
+                    class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+                    data-slot="table-row"
+                  >
+                    <td
+                      class="p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] h-24 text-center"
+                      colspan="7"
+                      data-slot="table-cell"
+                    >
+                      <div
+                        class="text-muted-foreground flex flex-col items-center justify-center space-y-1 py-2"
+                      >
+                        <div
+                          class="text-sm"
+                        >
+                          Loading products...
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-card text-card-foreground border-primary flex flex-col gap-6 rounded-xl border border-dashed py-6 shadow-sm"
+        data-slot="card"
+        data-testid="inventory-metrics"
+      >
+        <div
+          class="px-6"
+          data-slot="card-content"
+        >
+          <div
+            class="rounded-md border"
+          >
+            <div
+              class="relative w-full overflow-x-auto"
+              data-slot="table-container"
+            >
+              <table
+                class="w-full caption-bottom text-sm"
+                data-slot="table"
+              >
+                <thead
+                  class="[&_tr]:border-b"
+                  data-slot="table-header"
+                >
+                  <tr
+                    class="hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors"
+                    data-slot="table-row"
+                  >
+                    <th
+                      class="text-foreground h-10 px-2 text-left align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] font-semibold"
+                      data-slot="table-head"
+                    >
+                      Category
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-center font-semibold"
+                      data-slot="table-head"
+                    >
+                      Total Products
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right font-semibold"
+                      data-slot="table-head"
+                    >
+                      Total Value
+                    </th>
+                    <th
+                      class="text-foreground h-10 px-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] text-right font-semibold"
+                      data-slot="table-head"
+                    >
+                      Average Price
+                    </th>
+                  </tr>
+                </thead>
+                <tbody
+                  class="[&_tr:last-child]:border-0"
+                  data-slot="table-body"
+                />
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "store": {
+    "@@observable": [Function],
+    "dispatch": [Function],
+    "getState": [Function],
+    "replaceReducer": [Function],
+    "subscribe": [Function],
+  },
+  "unmount": [Function],
+}
+`;
