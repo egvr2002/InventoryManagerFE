@@ -7,9 +7,13 @@
     "dev": "vite --port 8080",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+<<<<<<< feat/testing
     "start": "vite preview --port 8080",
     "test": "vitest",
     "test:coverage": "vitest run --coverage"
+=======
+    "start": "tsc -b && vite build && vite preview --port 8080"
+>>>>>>> main
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.3.2",
