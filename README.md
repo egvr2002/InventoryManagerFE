@@ -70,6 +70,12 @@ You can run the tests using the following command:
 npm run test
 ```
 
+To run tests in watch mode (automatically rerun on file changes):
+
+```bash
+npm run test:watch
+```
+
 ## Development
 
 ### Project Structure
