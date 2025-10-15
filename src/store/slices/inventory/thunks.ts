@@ -20,6 +20,7 @@ import {
 
 import {generateSortParams} from "@/lib/utils";
 import {tryCatch} from "@/lib/tryCatch";
+import {toast} from "@/lib/toast";
 
 export function loadProductsThunk() {
   return async function (dispatch: AppDispatch, getState: () => RootState) {
@@ -38,7 +39,9 @@ export function loadProductsThunk() {
     );
 
     if (error) {
-      console.error("Failed to load products:", error);
+      toast.error("Failed to load products", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -52,7 +55,9 @@ export function addProductThunk(product: ProductDTO) {
     const [error] = await tryCatch(createProduct(product));
 
     if (error) {
-      console.error("Failed to create product:", error);
+      toast.error("Failed to create product", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -67,7 +72,9 @@ export function updateProductThunk(productId: string, product: ProductDTO) {
     const [error] = await tryCatch(updateProduct(productId, product));
 
     if (error) {
-      console.error("Failed to update product:", error);
+      toast.error("Failed to update product", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -81,7 +88,9 @@ export function markProductAsOutOfStockThunk(productId: string) {
     const [error] = await tryCatch(markProductAsOutOfStock(productId));
 
     if (error) {
-      console.error("Failed to mark product as out of stock:", error);
+      toast.error("Failed to mark product as out of stock", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -96,7 +105,9 @@ export function markProductAsInStockThunk(productId: string) {
     const [error] = await tryCatch(markProductAsInStock(productId));
 
     if (error) {
-      console.error("Failed to mark product as in stock:", error);
+      toast.error("Failed to mark product as in stock", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -111,7 +122,9 @@ export function deleteProductThunk(productId: string) {
     const [error] = await tryCatch(deleteProduct(productId));
 
     if (error) {
-      console.error("Failed to delete product:", error);
+      toast.error("Failed to delete product", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -126,7 +139,9 @@ export function loadInventoryMetricsThunk() {
     const [error, data] = await tryCatch(getInventoryMetrics());
 
     if (error) {
-      console.error("Failed to load inventory metrics:", error);
+      toast.error("Failed to load inventory metrics", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -139,7 +154,9 @@ export function loadCategoriesThunk() {
     const [error, data] = await tryCatch(getCategories());
 
     if (error) {
-      console.error("Failed to load categories:", error);
+      toast.error("Failed to load categories", {
+        description: "Please try again later",
+      });
       return;
     }
 
@@ -166,7 +183,9 @@ export function searchProductsThunk() {
     );
 
     if (error) {
-      console.error("Failed to search products:", error);
+      toast.error("Failed to search products", {
+        description: "Please try again later",
+      });
       return;
     }
 
