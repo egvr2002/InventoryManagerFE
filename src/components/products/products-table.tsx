@@ -1,4 +1,3 @@
-import {Button} from "../ui/button";
 import {Card, CardContent, CardHeader} from "../ui/card";
 import {
   Table,
@@ -10,6 +9,7 @@ import {
 } from "../ui/table";
 import {Checkbox} from "../ui/checkbox";
 import {ProductDialog} from "./product-dialog";
+import {DeleteProductButton} from "./delete-product-button";
 import {SortableHeader} from "../shared/sortable-header";
 import {
   formatCurrency,
@@ -227,13 +227,11 @@ export function ProductsTable({products}: ProductsTableProps) {
                           product={product}
                         />
                         /
-                        <Button
-                          className="m-0 p-0 text-red-500"
-                          variant="link"
-                          onClick={() => handleDeleteProduct(product.id)}
-                        >
-                          Delete
-                        </Button>
+                        <DeleteProductButton
+                          product={product}
+                          onConfirm={handleDeleteProduct}
+                          isLoading={isLoadingProducts}
+                        />
                       </TableCell>
                     </TableRow>
                   );
