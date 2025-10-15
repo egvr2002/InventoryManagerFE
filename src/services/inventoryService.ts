@@ -13,9 +13,11 @@ import type {
   ProductSearchRequest,
 } from "@/interfaces/shared/request-params.interface";
 
-export const getProducts = async (params: ProductListRequest) => {
-  const {page = 1, size = 10, sortParams = ""} = params;
-
+export const getProducts = async ({
+  page = 1,
+  size = 10,
+  sortParams = "",
+}: ProductListRequest) => {
   const response = await inventoryApi.get<ApiResponse<PaginatedProducts>>(
     `/products?page=${page}&size=${size}${sortParams}`,
   );
@@ -85,16 +87,14 @@ export const getCategories = async () => {
   return response.data;
 };
 
-export const searchProducts = async (params: ProductSearchRequest) => {
-  const {
-    name = "",
-    category = "all",
-    availability = "all",
-    page = 1,
-    size = 10,
-    sortParams = "",
-  } = params;
-
+export const searchProducts = async ({
+  page = 1,
+  size = 10,
+  sortParams = "",
+  name = "",
+  category = "all",
+  availability = "all",
+}: ProductSearchRequest) => {
   const searchParams = new URLSearchParams({
     name,
     category,
