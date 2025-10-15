@@ -5,10 +5,10 @@ export interface Product {
   name: string;
   category: string;
   unitPrice: number;
-  expirationDate: Date;
+  expirationDate: string;
   quantityInStock: number;
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export type PaginatedProducts = Paginated<Product>;
