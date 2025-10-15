@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {
   Dialog,
   DialogClose,
@@ -13,10 +13,12 @@ import {Button} from "../ui/button";
 import {Plus} from "lucide-react";
 import {Label} from "../ui/label";
 import {Input} from "../ui/input";
-import {useAppDispatch} from "@/store/hooks";
+import {CategoryAutocomplete} from "./category-autocomplete";
+import {useAppDispatch, useAppSelector} from "@/store/hooks";
 import {
   addProductThunk,
   updateProductThunk,
+  loadCategoriesThunk,
 } from "@/store/slices/inventory/thunks";
 import type {Product, ProductDTO} from "@/interfaces/product/product.interface";
 
@@ -28,6 +30,20 @@ interface ProductDialogProps {
 export function ProductDialog({action, product}: ProductDialogProps) {
   const dispatch = useAppDispatch();
   const [open, setOpen] = useState(false);
+  const [categoryValue, setCategoryValue] = useState(product?.category || "");
+  const {categories} = useAppSelector((state) => state.categories);
+
+  // Load categories when dialog opens
+  useEffect(() => {
+    if (open && categories.length === 0) {
+      dispatch(loadCategoriesThunk());
+    }
+  }, [open, categories.length, dispatch]);
+
+  // Update category value when product changes
+  useEffect(() => {
+    setCategoryValue(product?.category || "");
+  }, [product?.category]);
 
   const handleFormAction = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -35,9 +51,9 @@ export function ProductDialog({action, product}: ProductDialogProps) {
     const formData = new FormData(event.currentTarget);
     const productData: ProductDTO = {
       name: formData.get("name") as string,
-      category: formData.get("category") as string,
+      category: categoryValue,
       unitPrice: parseFloat(formData.get("unitPrice") as string),
-      expirationDate: new Date(formData.get("expirationDate") as string),
+      expirationDate: formData.get("expirationDate") as string,
       quantityInStock: parseInt(formData.get("quantityInStock") as string),
     };
 
@@ -98,16 +114,12 @@ export function ProductDialog({action, product}: ProductDialogProps) {
               />
             </div>
 
-            <div className="grid gap-2">
-              <Label htmlFor="category">Category</Label>
-              <Input
-                type="text"
-                name="category"
-                id="category"
-                defaultValue={product?.category}
-                required
-              />
-            </div>
+            <CategoryAutocomplete
+              value={categoryValue}
+              onChange={setCategoryValue}
+              categories={categories}
+              id="category"
+            />
 
             <div className="grid gap-2">
               <Label htmlFor="quantityInStock">Stock Quantity</Label>
