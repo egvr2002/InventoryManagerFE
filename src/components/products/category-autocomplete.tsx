@@ -1,17 +1,8 @@
-import {useState} from "react";
+import {Input} from "../ui/input";
 import {Label} from "../ui/label";
 import {cn} from "@/lib/utils";
-import {CheckIcon, ChevronDownIcon, PlusIcon} from "lucide-react";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "../ui/command";
-import {Popover, PopoverContent, PopoverTrigger} from "../ui/popover";
-import {Button} from "../ui/button";
+import {ChevronDownIcon} from "lucide-react";
+import {useCategoryAutocomplete} from "@/hooks/useCategoryAutocomplete";
 
 interface CategoryAutocompleteProps {
   value: string;
@@ -28,101 +19,73 @@ export const CategoryAutocomplete = ({
   placeholder = "Select or type a category",
   id,
 }: CategoryAutocompleteProps) => {
-  const [open, setOpen] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
-
-  const hasMatchingCategory = categories.some((category) =>
-    category.toLowerCase().includes(searchValue.toLowerCase()),
-  );
-
-  const showNewCategoryOption = searchValue && !hasMatchingCategory;
+  const {
+    isOpen,
+    inputValue,
+    filteredCategories,
+    inputRef,
+    dropdownRef,
+    handleInputChange,
+    handleCategorySelect,
+    handleInputFocus,
+    handleInputBlur,
+    handleKeyDown,
+  } = useCategoryAutocomplete({
+    value,
+    onChange,
+    categories,
+  });
 
   return (
-    <div className="space-y-2">
+    <div className="grid gap-2">
       <Label htmlFor={id}>Category</Label>
-      <Popover
-        open={open}
-        onOpenChange={setOpen}
-      >
-        <PopoverTrigger asChild>
-          <Button
-            variant="outline"
-            role="combobox"
-            aria-expanded={open}
-            className="w-full justify-between"
-            id={id}
+      <div className="relative">
+        <Input
+          ref={inputRef}
+          type="text"
+          id={id}
+          value={inputValue}
+          onChange={handleInputChange}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
+          onKeyDown={handleKeyDown}
+          placeholder={placeholder}
+          className="pr-8"
+        />
+        <ChevronDownIcon
+          className={cn(
+            "text-muted-foreground absolute top-1/2 right-2 h-4 w-4 -translate-y-1/2 transition-transform",
+            isOpen && "rotate-180",
+          )}
+        />
+
+        {isOpen && (
+          <div
+            ref={dropdownRef}
+            className="bg-popover absolute z-50 mt-1 max-h-60 w-full overflow-auto rounded-md border shadow-md"
           >
-            {value || placeholder}
-            <ChevronDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
-          </Button>
-        </PopoverTrigger>
-        <PopoverContent
-          className="p-0"
-          align="start"
-        >
-          <Command>
-            <CommandInput
-              placeholder="Search categories..."
-              value={searchValue}
-              onValueChange={setSearchValue}
-            />
-            <CommandList>
-              <CommandEmpty>
-                {searchValue ? (
-                  <CommandItem
-                    value={searchValue}
-                    onSelect={() => {
-                      onChange(searchValue);
-                      setSearchValue("");
-                      setOpen(false);
-                    }}
-                  >
-                    <PlusIcon className="mr-2 h-4 w-4" />
-                    Create "{searchValue}"
-                  </CommandItem>
-                ) : (
-                  <div className="text-muted-foreground py-6 text-center text-sm">
-                    Type to search categories
-                  </div>
-                )}
-              </CommandEmpty>
-              <CommandGroup>
-                {categories.map((category) => (
-                  <CommandItem
+            {filteredCategories.length > 0 ? (
+              <div className="p-1">
+                {filteredCategories.map((category) => (
+                  <div
                     key={category}
-                    value={category}
-                    onSelect={(currentValue) => {
-                      onChange(currentValue === value ? "" : currentValue);
-                      setOpen(false);
-                    }}
+                    className="hover:bg-accent hover:text-accent-foreground cursor-pointer rounded-sm px-2 py-1.5 text-sm"
+                    onClick={() => handleCategorySelect(category)}
                   >
-                    <CheckIcon
-                      className={cn(
-                        "mr-2 h-4 w-4",
-                        value === category ? "opacity-100" : "opacity-0",
-                      )}
-                    />
                     {category}
-                  </CommandItem>
+                  </div>
                 ))}
-                {showNewCategoryOption && (
-                  <CommandItem
-                    value={searchValue}
-                    onSelect={() => {
-                      onChange(searchValue);
-                      setSearchValue("");
-                      setOpen(false);
-                    }}
-                  >
-                    <PlusIcon className="mr-2 h-4 w-4" />
-                    Create "{searchValue}"
-                  </CommandItem>
-                )}
-              </CommandGroup>
-            </CommandList>
-          </Command>
-        </PopoverContent>
-      </Popover>
+              </div>
+            ) : (
+              <div className="text-muted-foreground p-2 text-sm">
+                {inputValue
+                  ? "No categories found"
+                  : "Type to search categories"}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   );
 };
