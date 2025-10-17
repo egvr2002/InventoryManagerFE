@@ -23,7 +23,6 @@ export function SortableHeader({
   const sortIndex = sortFields.findIndex((sort) => sort.field === field);
 
   const handleSort = () => {
-    console.log("handleSort", field, currentSort);
     if (!currentSort) {
       onSort(field, "asc");
     } else if (currentSort.order === "asc") {
