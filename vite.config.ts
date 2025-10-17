@@ -2,6 +2,8 @@
 import path from "path";
 
 import {defineConfig} from "vite";
+import {configDefaults} from "vitest/config";
+
 import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
 
@@ -18,5 +20,11 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./src/tests/setup.ts"],
     css: true,
+    coverage: {
+      exclude: [
+        ...(configDefaults.coverage.exclude ?? []),
+        "src/components/ui/**",
+      ],
+    },
   },
 });
