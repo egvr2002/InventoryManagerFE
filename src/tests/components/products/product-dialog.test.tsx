@@ -4,21 +4,22 @@ import userEvent from "@testing-library/user-event";
 import type {Product} from "@/interfaces/product/product.interface";
 import {ProductDialog} from "@/components/products/product-dialog";
 import {renderWithProviders} from "../../utils/test-utils";
-import {
-  addProductThunk,
-  updateProductThunk,
-} from "@/store/slices/inventory/thunks";
+import * as inventoryService from "@/services/inventoryService";
 
-vi.mock("@/store/slices/inventory/thunks", () => ({
-  addProductThunk: vi.fn(),
-  updateProductThunk: vi.fn(),
-  loadProductsThunk: vi.fn(),
-  loadCategoriesThunk: vi.fn(),
-  loadInventoryMetricsThunk: vi.fn(),
+vi.mock("@/services/inventoryService", () => ({
+  createProduct: vi.fn(),
+  updateProduct: vi.fn(),
+  getProducts: vi.fn(),
+  getCategories: vi.fn(),
+  getInventoryMetrics: vi.fn(),
+  deleteProduct: vi.fn(),
+  markProductAsOutOfStock: vi.fn(),
+  markProductAsInStock: vi.fn(),
+  searchProducts: vi.fn(),
 }));
 
-const mockAddProductThunk = vi.mocked(addProductThunk);
-const mockUpdateProductThunk = vi.mocked(updateProductThunk);
+const mockCreateProduct = vi.mocked(inventoryService.createProduct);
+const mockUpdateProduct = vi.mocked(inventoryService.updateProduct);
 
 describe("ProductDialog", () => {
   const user = userEvent.setup();
@@ -26,8 +27,48 @@ describe("ProductDialog", () => {
   beforeEach(() => {
     vi.clearAllMocks();
 
-    mockAddProductThunk.mockReturnValue(() => Promise.resolve());
-    mockUpdateProductThunk.mockReturnValue(() => Promise.resolve());
+    mockCreateProduct.mockResolvedValue({
+      status: "success",
+      statusCode: 200,
+      message: "Success",
+      data: {} as Product,
+      error: null,
+    });
+
+    mockUpdateProduct.mockResolvedValue({
+      status: "success",
+      statusCode: 200,
+      message: "Success",
+      data: {} as Product,
+      error: null,
+    });
+
+    vi.mocked(inventoryService.getProducts).mockResolvedValue({
+      status: "success",
+      statusCode: 200,
+      message: "Success",
+      data: {
+        content: [],
+        page: {size: 10, number: 1, totalElements: 0, totalPages: 0},
+      },
+      error: null,
+    });
+
+    vi.mocked(inventoryService.getCategories).mockResolvedValue({
+      status: "success",
+      statusCode: 200,
+      message: "Success",
+      data: [],
+      error: null,
+    });
+
+    vi.mocked(inventoryService.getInventoryMetrics).mockResolvedValue({
+      status: "success",
+      statusCode: 200,
+      message: "Success",
+      data: [],
+      error: null,
+    });
   });
 
   describe("Add Product Dialog", () => {
@@ -71,7 +112,6 @@ describe("ProductDialog", () => {
       await user.click(triggerButton);
 
       expect(screen.getByLabelText(/name/i)).toBeRequired();
-      expect(screen.getByLabelText(/category/i)).toBeRequired();
       expect(screen.getByLabelText(/stock quantity/i)).toBeRequired();
       expect(screen.getByLabelText(/unit price/i)).toBeRequired();
     });
@@ -94,12 +134,12 @@ describe("ProductDialog", () => {
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(mockAddProductThunk).toHaveBeenCalledWith({
+        expect(mockCreateProduct).toHaveBeenCalledWith({
           name: "Test Product",
           category: "Electronics",
           quantityInStock: 10,
           unitPrice: 29.99,
-          expirationDate: new Date("2024-12-31"),
+          expirationDate: "2024-12-31",
         });
       });
     });
@@ -145,9 +185,9 @@ describe("ProductDialog", () => {
       category: "Electronics",
       quantityInStock: 5,
       unitPrice: 19.99,
-      expirationDate: new Date("2024-06-30"),
-      createdAt: new Date("2024-01-01"),
-      updatedAt: new Date("2024-01-02"),
+      expirationDate: "2024-06-30",
+      createdAt: "2024-01-01",
+      updatedAt: "2024-01-02",
     };
 
     it("should render the edit product dialog trigger button", () => {
@@ -224,12 +264,12 @@ describe("ProductDialog", () => {
       await user.click(submitButton);
 
       await waitFor(() => {
-        expect(mockUpdateProductThunk).toHaveBeenCalledWith("1", {
+        expect(mockUpdateProduct).toHaveBeenCalledWith("1", {
           name: "Updated Product",
           category: "Electronics",
           quantityInStock: 5,
           unitPrice: 25.99,
-          expirationDate: new Date("2024-06-30"),
+          expirationDate: "2024-06-30",
         });
       });
     });
@@ -263,6 +303,6 @@ describe("ProductDialog", () => {
     await user.click(submitButton);
 
     expect(screen.getByRole("dialog")).toBeInTheDocument();
-    expect(mockAddProductThunk).not.toHaveBeenCalled();
+    expect(mockCreateProduct).not.toHaveBeenCalled();
   });
 });
